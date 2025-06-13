@@ -16,29 +16,31 @@ public class Matrices {
         return false;
     }
 
-    public static void printSpiral(int matrix[][]){
-        while (condition) {
-            //top layer
-            for (var each : collection) {
-                
-            }
-
-            //right side
-            for (var each : collection) {
-                
-            }
-
-            //bottom layer
-            for (var each : collection) {
-                
-            }
-
-            //left layer
-            for (int l=0; l<0; l++) {
-                
-            }
-        }
-    }
+    /*
+     * public static void printSpiral(int matrix[][]){
+     * while (condition) {
+     * //top layer
+     * for (var each : collection) {
+     * 
+     * }
+     * 
+     * //right side
+     * for (var each : collection) {
+     * 
+     * }
+     * 
+     * //bottom layer
+     * for (var each : collection) {
+     * 
+     * }
+     * 
+     * //left layer
+     * for (int l=0; l<0; l++) {
+     * 
+     * }
+     * }
+     * }
+     */
 
     public static void main(String[] args) {
         int matrix[][] = new int[3][3];

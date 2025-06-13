@@ -32,12 +32,12 @@ public class sorting {
         }
     }
 
-    public static void insertionsort(int a[]){
-        for(int i=1; i<a.length; i++){
+    public static void insertionsort(int a[]) {
+        for (int i = 1; i < a.length; i++) {
             int curr = a[i];
-            int prev = i-1:
-            while(prev>=0 && curr>prev){
-                prev[i+1]=prev;
+            int prev = i - 1;
+            while (prev >= 0 && curr > prev) {
+                prev = i + 1;
                 prev--;
             }
         }
