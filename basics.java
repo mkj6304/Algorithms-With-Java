@@ -70,5 +70,11 @@ public class basics {
         // b.fibo(7);
         int[] res = b.bubbleSort(arr);
         System.out.println(Arrays.toString(res));
+        List<Integer> lst = new ArrayList<>();
+        lst.add(10);
+        lst.add(20);
+        for (int x : lst) {
+            System.out.print(x + " ");
+        }
     }
 }
