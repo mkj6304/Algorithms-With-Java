@@ -2,25 +2,25 @@ import java.util.*;
 
 public class basics {
 
-    /*
-     * boolean binarySearch(int[] nums, int key){
-     * int mid = nums.length/2;
-     * Arrays.sort(nums);
-     * while(mid<nums.length && mid>=0){
-     * 
-     * }
-     * 
-     * 
-     * }
-     */
+    boolean binary_Search(int[] nums, int key) {
+        int low = 0;
+        int high = nums.length - 1;
+        int mid = 0;
+        if (nums.length == 0)
+            return false;
 
-    /*
-     * void fibo(int terms) {
-     * for(int i=0; i<terms; i++){
-     * print(i)
-     * }
-     * }
-     */
+        while (low < high) {
+            mid = (low + high) / 2;
+
+            if (nums[mid] == key)
+                return true;
+            else if (nums[mid] < key)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        return false;
+    }
 
     int[] bubbleSort(int[] nums) {
         int temp = 0;
@@ -61,6 +61,22 @@ public class basics {
         return false;
     }
 
+    void first_and_last_occ(int[] nums, int target) {
+        int first = -1;
+        int last = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+
+                if (first == -1) {
+                    first = i;
+                }
+
+                last = i;
+            }
+        }
+        System.out.println("first and last are" + first + last);
+    }
+
     public static void main(String args[]) {
         int[] arr = { 2, 1, 4, 5, 6, 718, 9347, 88, 84 };
         basics b = new basics();
@@ -68,13 +84,21 @@ public class basics {
         // System.out.println(b.fact(5));
         // System.out.println(b.recursiveFact(5));
         // b.fibo(7);
-        int[] res = b.bubbleSort(arr);
-        System.out.println(Arrays.toString(res));
-        List<Integer> lst = new ArrayList<>();
-        lst.add(10);
-        lst.add(20);
-        for (int x : lst) {
-            System.out.print(x + " ");
-        }
+        /*
+         * int[] res = b.bubbleSort(arr);
+         * System.out.println(Arrays.toString(res));
+         * List<Integer> lst = new ArrayList<>();
+         * lst.add(10);
+         * lst.add(20);
+         * for (int x : lst) {
+         * System.out.print(x + " ");
+         * }
+         */
+
+        // HashMap
+        int[] arr2 = { 2, 4, 4, 4, 4, 7, 9, 9, 10 };
+        HashMap<String, Integer> h = new HashMap<>();
+        System.out.println(b.binary_Search(arr, 9347));
+        b.first_and_last_occ(arr2, 4);
     }
 }
