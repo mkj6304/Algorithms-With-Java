@@ -49,6 +49,28 @@ public class Recurs {
         printF(nums, ind + 1, lst, n);
     }
 
+    int second_Largest(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int max2 = Integer.MIN_VALUE;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > max) {
+                max2 = max;
+                max = nums[i];
+            }
+
+            else if (nums[i] > max2 && nums[i] < max) {
+                max2 = nums[i];
+            }
+        }
+        return max2;
+    }
+
+    boolean anagram(String s){
+        int[] freq = new int[26];
+        
+    }
+
     public static void main(String[] args) {
         Recurs r = new Recurs();
         r.print_Name(5);
@@ -59,6 +81,7 @@ public class Recurs {
         r.reverseArray(arr, 0, 0);
         List<Integer> lst = new ArrayList<>();
         r.printF(arr, 0, lst, arr.length);
+        System.out.println(r.second_Largest(arr));
     }
 
 }
